@@ -8,10 +8,25 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        // Primary
+        "soft-red": "hsl(7, 99%, 70%)",
+        yellow: "hsl(51, 100%, 49%)",
+        "desaturated-cyan": "hsl(167, 40%, 24%)",
+        "moderate-cyan": "hsl(168, 34%, 41%)",
+
+        // Neutral
+        "desaturated-blue": "hsl(212, 27%, 19%)",
+        "dark-grayish-blue": "hsl(213, 9%, 39%)",
+        "grayish-blue": "hsl(210, 4%, 67%)",
+        white: "hsl(0, 0%, 100%)",
+      },
+      fontSize: {
+        "18px": "18px",
+      },
+      fontFamily: {
+        barlow: ["Barlow", "sans-serif"],
+        fraunces: ["Fraunces", "sans-serif"],
       },
     },
   },
