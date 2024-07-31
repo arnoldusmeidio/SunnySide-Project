@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NavBar() {
   const [navBar, setNavbar] = useState(false);
@@ -17,7 +17,10 @@ export default function NavBar() {
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    return () => window.removeEventListener("scroll", changeBackground);
+  });
 
   const navMenu = [
     { name: "About", href: "/about" },
@@ -28,9 +31,9 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`${navBar ? "bg-yellow transition-all duration-300" : "bg-transparent"} fixed top-0 z-50 flex w-full items-center justify-between px-16 py-8`}
+      className={`${navBar ? "bg-indigo-400 transition-all duration-150" : "bg-transparent"} fixed top-0 z-50 flex w-full items-center justify-between px-16 py-8`}
     >
-      <Link href={"/"} className="h-full min-w-40">
+      <Link href={"/"} className="h-full min-w-44">
         <h1>
           <Image
             src="/logo.svg"
@@ -41,6 +44,7 @@ export default function NavBar() {
           />
         </h1>
       </Link>
+
       <ul className="flex space-x-12">
         {navMenu.map((menu, index) => (
           <li key={index} className="font-bold">

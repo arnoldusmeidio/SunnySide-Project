@@ -13,7 +13,9 @@ const config: Config = {
         "soft-red": "hsl(7, 99%, 70%)",
         yellow: "hsl(51, 100%, 49%)",
         "desaturated-cyan": "hsl(167, 40%, 24%)",
+        "dark-blue": "hsl(198, 62%, 26%)",
         "moderate-cyan": "hsl(168, 34%, 41%)",
+        "light-desaturated-cyan": "hsl(167, 44%, 70%)",
 
         // Neutral
         "desaturated-blue": "hsl(212, 27%, 19%)",

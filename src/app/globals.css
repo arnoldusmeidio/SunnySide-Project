@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card-style {
+    @apply h-[40vw];
+  }
+
+  .card-text {
+    @apply flex flex-col justify-center gap-10 p-52;
+  }
+}
