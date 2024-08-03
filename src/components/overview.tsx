@@ -14,7 +14,7 @@ export default function Overview() {
           of the marketing for you.
         </p>
         <Link
-          href={"/"}
+          href={"/services"}
           className="w-fit border-b-8 border-dashed border-yellow font-fraunces font-bold"
         >
           LEARN MORE
@@ -51,7 +51,7 @@ export default function Overview() {
           your brand in digital places.
         </p>
         <Link
-          href={"/"}
+          href={"/services"}
           className="w-fit border-b-8 border-dashed border-soft-red font-fraunces font-bold"
         >
           LEARN MORE
@@ -90,11 +90,11 @@ export default function Overview() {
             height={600}
           />
         </div>
-        <div className="flex h-full flex-col items-center justify-end gap-5 px-64 pb-32">
-          <h4 className="text-dark-blue font-fraunces text-[2.5rem] font-bold leading-[4rem]">
+        <div className="flex h-full flex-col items-center justify-end gap-5 px-64 pb-36">
+          <h4 className="font-fraunces text-[2.5rem] font-bold leading-[4rem] text-dark-blue">
             Photography
           </h4>
-          <p className="text-dark-blue text-center text-xl font-medium">
+          <p className="text-center text-xl font-medium text-dark-blue">
             Increase your credibility by getting the most stunning, high-quality
             photos that improve your business image.
           </p>

@@ -6,29 +6,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const footerImage = [
-    {
-      src: "/desktop/image-gallery-milkbottles.jpg",
-      alt: "3 white milk bottle with red cap on a blue background with white cloud above it.",
-    },
-    {
-      src: "/desktop/image-gallery-orange.jpg",
-      alt: "Half cut orange on top of white plate and on top of blue plate on an orange background.",
-    },
-    {
-      src: "/desktop/image-gallery-cone.jpg",
-      alt: "Waffle cone without ice cream on blue background.",
-    },
-    {
-      src: "/desktop/image-gallery-sugarcubes.jpg",
-      alt: "Sugar cubes stack on top of each other on a soft red background.",
-    },
-  ];
-
   const footerMenu = [
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
-    { name: "Teams", href: "/teams" },
+    { name: "Team", href: "/team" },
   ];
 
   const socialMedia = [
@@ -57,29 +38,15 @@ export default function Footer() {
 
   return (
     <footer className="h-auto w-full">
-      <div className="grid auto-cols-fr grid-cols-4">
-        {footerImage.map((image, index) => (
-          <div key={index}>
-            <Image
-              src={image.src}
-              alt={image.src}
-              width={720}
-              height={894}
-              className="width-auto height-auto"
-            />
-          </div>
-        ))}
-      </div>
-
-      <div className="bg-light-desaturated-cyan flex h-auto w-full flex-col items-center gap-20 p-20">
+      <div className="flex h-auto w-full flex-col items-center gap-20 bg-light-desaturated-cyan p-20">
         <div className="space-y-10">
           <Link href={"/"} className="flex justify-center">
             <h4>
               <Image
                 src="/logo-footer.svg"
                 alt="sunnyside logo"
-                width={100}
-                height={100}
+                width={124}
+                height={24}
                 className="h-auto min-w-44"
               />
             </h4>
@@ -91,9 +58,7 @@ export default function Footer() {
                 <Link
                   href={menu.href}
                   className={
-                    pathName === menu.href
-                      ? "text-soft-red"
-                      : "text-moderate-cyan"
+                    pathName === menu.href ? "text-black" : "text-moderate-cyan"
                   }
                 >
                   {menu.name}
@@ -109,9 +74,9 @@ export default function Footer() {
               <Image
                 src={social.src}
                 alt={social.alt}
-                width={100}
-                height={100}
-                className="h-full w-full"
+                width={20}
+                height={20}
+                className="h-full w-full object-cover"
               />
             </Link>
           ))}

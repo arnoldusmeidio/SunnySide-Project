@@ -2,12 +2,12 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="relative h-screen w-full">
+    <section className="relative h-screen w-full">
       <div className="absolute -z-10 h-full w-full overflow-hidden">
         <Image
           src="/desktop/image-header.jpg"
           alt="Half cut orange on a blue background"
-          className="relative h-full object-cover object-bottom"
+          className="relative h-full w-full object-cover object-bottom"
           width={2880}
           height={1600}
         />
@@ -27,6 +27,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </header>
+    </section>
   );
 }

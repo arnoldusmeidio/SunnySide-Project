@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import NavBar from "@/components/nav-bar";
+import Footer from "@/components/footer";
+import React from "react";
+
+// import dynamic from "next/dynamic";
+
 export const metadata: Metadata = {
-  title: "SUNNYSIDE",
-  description: "Your one stop design partner",
+  title: "SunnySide",
+  description: "Your one stop design solution",
 };
 
 export default function RootLayout({
@@ -13,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="box-border h-screen text-2xl">{children}</body>
+      <body className="box-border h-screen text-2xl">
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

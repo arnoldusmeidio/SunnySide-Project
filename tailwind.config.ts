@@ -29,6 +29,7 @@ const config: Config = {
       fontFamily: {
         barlow: ["Barlow", "sans-serif"],
         fraunces: ["Fraunces", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
