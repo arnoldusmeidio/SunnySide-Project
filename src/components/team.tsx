@@ -36,7 +36,7 @@ export default function Team() {
         />
       </div>
 
-      <div className="flex h-full flex-col items-center gap-36 pt-52">
+      <div className="flex h-full flex-col items-center gap-20 pt-36">
         <h2 className="font-fraunces text-[5rem] font-black tracking-[1rem] text-[#0948c7]">
           OUR TEAM
         </h2>

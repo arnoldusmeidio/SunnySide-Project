@@ -23,12 +23,12 @@ export default function Testimony() {
   ];
 
   return (
-    <section className="flex h-screen flex-col items-center justify-center gap-24">
-      <h4 className="font-fraunces font-bold tracking-[0.5rem] text-grayish-blue">
+    <section className="flex h-screen flex-col items-center justify-center gap-24 max-lg:h-fit">
+      <h4 className="font-fraunces text-2xl font-bold tracking-[0.5rem] text-grayish-blue max-lg:pt-10">
         CLIENT TESTIMONIALS
       </h4>
 
-      <div className="flex px-20">
+      <div className="flex px-20 max-lg:flex-col">
         {testimony.map((data, index) => (
           <div key={index} className="flex flex-col items-center gap-20 p-8">
             <div className="overflow-hidden rounded-full">
@@ -40,11 +40,13 @@ export default function Testimony() {
                 className="width-auto height-auto"
               />
             </div>
-            <p className="text-center font-medium text-dark-grayish-blue">
+            <p className="text-center text-2xl font-medium text-dark-grayish-blue">
               {data.text}
             </p>
             <div className="flex flex-col items-center gap-2">
-              <span className="font-fraunces font-bold">{data.name}</span>
+              <span className="font-fraunces text-2xl font-bold">
+                {data.name}
+              </span>
               <span className="text-xl font-semibold text-grayish-blue">
                 {data.position}
               </span>

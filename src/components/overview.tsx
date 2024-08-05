@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Overview() {
   return (
-    <section className="grid auto-cols-fr grid-cols-2">
-      <div className="card-style card-text">
+    <section className="grid grid-cols-1 lg:auto-cols-fr lg:grid-cols-2">
+      <div className="card-style card-text max-lg:order-2">
         <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem]">
           Transform your brand
         </h3>
@@ -21,7 +21,11 @@ export default function Overview() {
         </Link>
       </div>
 
-      <div className="card-style overflow-hidden">
+      <picture className="card-style overflow-hidden max-lg:order-1">
+        <source
+          media="(max-width:1024px)"
+          srcSet="/mobile/image-transform.jpg"
+        />
         <Image
           src="/desktop/image-transform.jpg"
           alt="White egg on a yellow background."
@@ -29,9 +33,13 @@ export default function Overview() {
           width={720}
           height={600}
         />
-      </div>
+      </picture>
 
-      <div className="card-style overflow-hidden">
+      <picture className="card-style overflow-hidden max-lg:order-3">
+        <source
+          media="(max-width:1024px)"
+          srcSet="/mobile/image-stand-out.jpg"
+        />
         <Image
           src="/desktop/image-stand-out.jpg"
           alt="Pink glass on a pink background."
@@ -39,9 +47,9 @@ export default function Overview() {
           width={720}
           height={600}
         />
-      </div>
+      </picture>
 
-      <div className="card-style card-text">
+      <div className="card-style card-text max-lg:order-4">
         <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem]">
           Stand out to the right audience
         </h3>
@@ -58,17 +66,21 @@ export default function Overview() {
         </Link>
       </div>
 
-      <div className="card-style relative">
-        <div className="absolute -z-10 h-full w-full overflow-hidden">
+      <div className="card-style relative max-lg:order-5">
+        <picture className="absolute -z-10 h-full w-full overflow-hidden">
+          <source
+            media="(max-width:1024px)"
+            srcSet="/mobile/image-graphic-design.jpg"
+          />
           <Image
             src="/desktop/image-graphic-design.jpg"
             alt="Two cherries on a light blue background"
-            className="relative top-[50%] w-full translate-y-[-50%] object-contain"
+            className="relative top-[50%] h-full w-full translate-y-[-50%] object-cover"
             width={720}
             height={600}
           />
-        </div>
-        <div className="flex h-full flex-col items-center justify-end gap-5 px-64 pb-32">
+        </picture>
+        <div className="card-response flex h-full flex-col items-center gap-3">
           <h4 className="font-fraunces text-[2.5rem] font-bold leading-[4rem] text-desaturated-cyan">
             Graphic Design
           </h4>
@@ -80,17 +92,22 @@ export default function Overview() {
         </div>
       </div>
 
-      <div className="card-style relative">
-        <div className="absolute -z-10 h-full w-full overflow-hidden">
+      <div className="card-style relative max-lg:order-6">
+        <picture className="absolute -z-10 h-full w-full overflow-hidden">
+          <source
+            media="(max-width:1024px)"
+            srcSet="/mobile/image-photography.jpg"
+          />
           <Image
             src="/desktop/image-photography.jpg"
             alt="Orange on a blue background"
-            className="relative top-[50%] w-full translate-y-[-50%] object-contain"
+            className="relative top-[50%] h-full w-full translate-y-[-50%] object-cover"
             width={720}
             height={600}
           />
-        </div>
-        <div className="flex h-full flex-col items-center justify-end gap-5 px-64 pb-36">
+        </picture>
+
+        <div className="card-response flex h-full flex-col items-center gap-3">
           <h4 className="font-fraunces text-[2.5rem] font-bold leading-[4rem] text-dark-blue">
             Photography
           </h4>

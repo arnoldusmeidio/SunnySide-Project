@@ -14,8 +14,8 @@ export default function Services() {
         />
       </div>
 
-      <div className="flex h-full flex-col items-center gap-12 pt-32">
-        <h2 className="pb-8 font-fraunces text-[5rem] font-black tracking-[1rem] text-cyan-800">
+      <div className="flex h-full flex-col items-center gap-8 pt-20">
+        <h2 className="font-fraunces text-[5rem] font-black tracking-[1rem] text-cyan-800">
           SERVICES
         </h2>
 

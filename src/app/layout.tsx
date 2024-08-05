@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="box-border h-screen text-2xl">
+      <body className="box-border h-screen">
         <NavBar />
         {children}
         <Footer />

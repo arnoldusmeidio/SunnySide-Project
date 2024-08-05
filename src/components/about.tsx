@@ -13,7 +13,7 @@ export default function About() {
         />
       </div>
 
-      <div className="flex h-full flex-col items-center gap-36 pt-52">
+      <div className="flex h-full flex-col items-center gap-28 pt-52">
         <h2 className="font-fraunces text-[5rem] font-black tracking-[1rem] text-desaturated-blue">
           ABOUT US
         </h2>

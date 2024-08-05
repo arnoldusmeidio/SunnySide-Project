@@ -52,7 +52,7 @@ export default function Footer() {
             </h4>
           </Link>
 
-          <ul className="flex space-x-20">
+          <ul className="flex space-x-20 text-[1.5rem]">
             {footerMenu.map((menu, index) => (
               <li key={index} className="font-medium">
                 <Link

@@ -49,20 +49,22 @@ export default function NavBar() {
             </h1>
           </Link>
 
-          <ul className="flex space-x-12 text-[2rem]">
-            {navMenu.map((menu, index) => (
-              <li key={index} className="font-bold">
-                <Link
-                  href={menu.href}
-                  className={
-                    pathName === menu.href ? "text-black" : "text-white"
-                  }
-                >
-                  {menu.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="absolute max-lg:left-0 max-lg:top-[100%] max-lg:w-screen lg:static">
+            <ul className="flex items-center justify-center gap-20 rounded-s-3xl rounded-br-3xl text-[2rem] max-lg:mx-auto max-lg:h-[50vh] max-lg:w-[80%] max-lg:flex-col max-lg:bg-orange-400 lg:flex-row lg:space-x-12">
+              {navMenu.map((menu, index) => (
+                <li key={index} className="font-bold">
+                  <Link
+                    href={menu.href}
+                    className={
+                      pathName === menu.href ? "text-black" : "text-white"
+                    }
+                  >
+                    {menu.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       ) : null}
     </header>
