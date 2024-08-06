@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        lg: "1025px",
+      },
       colors: {
         // Primary
         "soft-red": "hsl(7, 99%, 70%)",

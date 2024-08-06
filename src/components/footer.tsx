@@ -37,8 +37,8 @@ export default function Footer() {
   const pathName = usePathname();
 
   return (
-    <footer className="h-auto w-full">
-      <div className="flex h-auto w-full flex-col items-center gap-20 bg-light-desaturated-cyan p-20">
+    <footer className="w-full lg:h-auto">
+      <div className="flex h-auto w-full flex-col items-center gap-20 bg-light-desaturated-cyan p-10 lg:p-20">
         <div className="space-y-10">
           <Link href={"/"} className="flex justify-center">
             <h4>
@@ -52,7 +52,7 @@ export default function Footer() {
             </h4>
           </Link>
 
-          <ul className="flex space-x-20 text-[1.5rem]">
+          <ul className="flex space-x-10 text-[1.5rem] max-[400px]:text-[1rem] lg:space-x-20">
             {footerMenu.map((menu, index) => (
               <li key={index} className="font-medium">
                 <Link
@@ -68,7 +68,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="flex h-8 w-full justify-center gap-10">
+        <div className="flex h-8 w-full justify-center gap-4 lg:gap-10">
           {socialMedia.map((social, index) => (
             <Link key={index} href={social.link}>
               <Image

@@ -8,6 +8,7 @@ import { useEffect, useState, useRef } from "react";
 
 export default function NavBar() {
   const [navBar, setNavbar] = useState<Boolean | undefined>();
+  const [showNavBar, setShowNavBar] = useState(false);
 
   useEffect(() => {
     const changeBackground = () => {
@@ -35,9 +36,12 @@ export default function NavBar() {
     <header>
       {navBar !== undefined ? (
         <nav
-          className={`${navBar ? "bg-indigo-400 transition-colors duration-75" : "bg-transparent"} fixed top-0 z-50 flex h-fit w-full items-center justify-between px-16 py-8`}
+          className={`${navBar || showNavBar ? "bg-indigo-400 transition-colors duration-75" : "bg-transparent"} fixed top-0 z-50 grid h-fit w-screen grid-cols-2 items-center justify-between px-6 py-8 min-[320px]:px-10 lg:px-16`}
         >
-          <Link href={"/"} className="flex h-fit min-w-52">
+          <Link
+            href={"/"}
+            className="flex h-fit max-w-52 max-[400px]:max-w-40 lg:min-w-52"
+          >
             <h1 className="h-full w-full">
               <Image
                 src="/logo.svg"
@@ -49,11 +53,23 @@ export default function NavBar() {
             </h1>
           </Link>
 
-          <div className="absolute max-lg:left-0 max-lg:top-[100%] max-lg:w-screen lg:static">
-            <ul className="flex items-center justify-center gap-20 rounded-s-3xl rounded-br-3xl text-[2rem] max-lg:mx-auto max-lg:h-[50vh] max-lg:w-[80%] max-lg:flex-col max-lg:bg-orange-400 lg:flex-row lg:space-x-12">
+          <Image
+            onClick={() => setShowNavBar(!showNavBar)}
+            src="/icon-hamburger.svg"
+            alt="Hamburer logo"
+            width={24}
+            height={18}
+            className="cursor-pointer justify-self-end lg:hidden"
+          />
+
+          <div
+            className={`absolute top-[100%] max-lg:w-screen lg:static lg:block lg:h-fit ${showNavBar ? "visible" : "hidden"}`}
+          >
+            <ul className="right-0 flex items-center justify-center gap-10 rounded-bl-3xl rounded-br-3xl text-[2rem] max-lg:h-[50vh] max-lg:flex-col max-lg:gap-20 max-lg:bg-orange-400 max-[400px]:h-[30vh] max-[400px]:gap-10 max-[400px]:text-[1rem] lg:flex-row lg:justify-end lg:space-x-12">
               {navMenu.map((menu, index) => (
                 <li key={index} className="font-bold">
                   <Link
+                    onClick={() => setShowNavBar(false)}
                     href={menu.href}
                     className={
                       pathName === menu.href ? "text-black" : "text-white"

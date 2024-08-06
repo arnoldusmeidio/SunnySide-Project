@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full">
+    <section className="relative min-h-screen w-full">
       <picture className="absolute -z-10 h-full w-full overflow-hidden">
-        <source media="(max-width:1024px)" srcSet="/mobile/image-header.jpg" />
+        <source media="(max-width:1025px)" srcSet="/mobile/image-header.jpg" />
         <Image
           src="/desktop/image-header.jpg"
           alt="Half cut orange on a blue background"
@@ -15,7 +15,7 @@ export default function Hero() {
       </picture>
 
       <div className="flex h-full flex-col items-center gap-44 pt-52">
-        <h2 className="text-center font-fraunces text-[5rem] font-black tracking-[1rem] text-white max-sm:text-[4rem] max-[550px]:text-[3rem]">
+        <h2 className="text-center font-fraunces text-[5rem] font-black tracking-[1rem] text-white max-sm:text-[4rem] max-[550px]:text-[3rem] max-[500px]:tracking-[0.5rem] max-[400px]:text-[2.5rem] max-[350px]:tracking-[0.25rem]">
           WE ARE CREATIVES
         </h2>
         <div className="w-14">

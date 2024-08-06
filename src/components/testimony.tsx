@@ -24,13 +24,16 @@ export default function Testimony() {
 
   return (
     <section className="flex h-screen flex-col items-center justify-center gap-24 max-lg:h-fit">
-      <h4 className="font-fraunces text-2xl font-bold tracking-[0.5rem] text-grayish-blue max-lg:pt-10">
+      <h4 className="w-full pt-10 text-center font-fraunces text-2xl font-bold tracking-[0.5rem] text-grayish-blue max-[400px]:text-sm">
         CLIENT TESTIMONIALS
       </h4>
 
-      <div className="flex px-20 max-lg:flex-col">
+      <div className="flex max-lg:flex-col max-lg:gap-10 lg:px-20">
         {testimony.map((data, index) => (
-          <div key={index} className="flex flex-col items-center gap-20 p-8">
+          <div
+            key={index}
+            className="flex flex-col items-center gap-20 p-8 max-lg:gap-10"
+          >
             <div className="overflow-hidden rounded-full">
               <Image
                 src={data.profilePicture}
@@ -40,14 +43,14 @@ export default function Testimony() {
                 className="width-auto height-auto"
               />
             </div>
-            <p className="text-center text-2xl font-medium text-dark-grayish-blue">
+            <p className="text-center text-2xl font-medium text-dark-grayish-blue max-[400px]:text-[1rem]">
               {data.text}
             </p>
             <div className="flex flex-col items-center gap-2">
-              <span className="font-fraunces text-2xl font-bold">
+              <span className="font-fraunces text-2xl font-bold max-[400px]:text-sm">
                 {data.name}
               </span>
-              <span className="text-xl font-semibold text-grayish-blue">
+              <span className="text-xl font-semibold text-grayish-blue max-[400px]:text-xs">
                 {data.position}
               </span>
             </div>

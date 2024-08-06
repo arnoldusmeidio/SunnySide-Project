@@ -5,7 +5,7 @@ export default function Overview() {
   return (
     <section className="grid grid-cols-1 lg:auto-cols-fr lg:grid-cols-2">
       <div className="card-style card-text max-lg:order-2">
-        <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem]">
+        <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem] max-sm:text-[2rem]">
           Transform your brand
         </h3>
         <p className="text-xl font-medium text-dark-grayish-blue">
@@ -23,7 +23,7 @@ export default function Overview() {
 
       <picture className="card-style overflow-hidden max-lg:order-1">
         <source
-          media="(max-width:1024px)"
+          media="(max-width:1025px)"
           srcSet="/mobile/image-transform.jpg"
         />
         <Image
@@ -37,7 +37,7 @@ export default function Overview() {
 
       <picture className="card-style overflow-hidden max-lg:order-3">
         <source
-          media="(max-width:1024px)"
+          media="(max-width:1025px)"
           srcSet="/mobile/image-stand-out.jpg"
         />
         <Image
@@ -50,7 +50,7 @@ export default function Overview() {
       </picture>
 
       <div className="card-style card-text max-lg:order-4">
-        <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem]">
+        <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem] max-sm:text-[2rem]">
           Stand out to the right audience
         </h3>
         <p className="text-xl font-medium text-dark-grayish-blue">
@@ -69,7 +69,7 @@ export default function Overview() {
       <div className="card-style relative max-lg:order-5">
         <picture className="absolute -z-10 h-full w-full overflow-hidden">
           <source
-            media="(max-width:1024px)"
+            media="(max-width:1025px)"
             srcSet="/mobile/image-graphic-design.jpg"
           />
           <Image
@@ -81,7 +81,7 @@ export default function Overview() {
           />
         </picture>
         <div className="card-response flex h-full flex-col items-center gap-3">
-          <h4 className="font-fraunces text-[2.5rem] font-bold leading-[4rem] text-desaturated-cyan">
+          <h4 className="text-center font-fraunces text-[2.5rem] font-bold leading-[4rem] text-desaturated-cyan">
             Graphic Design
           </h4>
           <p className="text-center text-xl font-medium text-desaturated-cyan">
@@ -95,7 +95,7 @@ export default function Overview() {
       <div className="card-style relative max-lg:order-6">
         <picture className="absolute -z-10 h-full w-full overflow-hidden">
           <source
-            media="(max-width:1024px)"
+            media="(max-width:1025px)"
             srcSet="/mobile/image-photography.jpg"
           />
           <Image
