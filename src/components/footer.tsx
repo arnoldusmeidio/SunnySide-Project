@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
+import Carousel from "./carousel";
 
 export default function Footer() {
   const footerMenu = [
@@ -70,7 +71,7 @@ export default function Footer() {
 
         <div className="flex h-8 w-full justify-center gap-4 lg:gap-10">
           {socialMedia.map((social, index) => (
-            <Link key={index} href={social.link}>
+            <Link key={index} href={social.link} target="_blank">
               <Image
                 src={social.src}
                 alt={social.alt}

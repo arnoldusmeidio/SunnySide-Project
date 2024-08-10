@@ -23,7 +23,7 @@ export default function Testimony() {
   ];
 
   return (
-    <section className="flex h-screen flex-col items-center justify-center gap-24 max-lg:h-fit">
+    <section className="flex h-screen flex-col items-center justify-center gap-24 bg-white max-lg:h-fit">
       <h4 className="w-full pt-10 text-center font-fraunces text-2xl font-bold tracking-[0.5rem] text-grayish-blue max-[400px]:text-sm">
         CLIENT TESTIMONIALS
       </h4>

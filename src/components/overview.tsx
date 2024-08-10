@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function Overview() {
   return (
     <section className="grid grid-cols-1 lg:auto-cols-fr lg:grid-cols-2">
-      <div className="card-style card-text max-lg:order-2">
-        <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem] max-sm:text-[2rem]">
+      <div className="card-style card-text bg-white max-lg:order-2">
+        <h3 className="font-fraunces text-[3rem] font-bold leading-[2rem] max-sm:text-[2rem] min-[400px]:leading-[4rem]">
           Transform your brand
         </h3>
         <p className="text-xl font-medium text-dark-grayish-blue">
@@ -49,7 +49,7 @@ export default function Overview() {
         />
       </picture>
 
-      <div className="card-style card-text max-lg:order-4">
+      <div className="card-style card-text bg-white max-lg:order-4">
         <h3 className="font-fraunces text-[3rem] font-bold leading-[4rem] max-sm:text-[2rem]">
           Stand out to the right audience
         </h3>
