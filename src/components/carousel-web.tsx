@@ -33,36 +33,36 @@ export default function CarouselWeb() {
       {mapCollection?.map((item, idx) => (
         <div
           id={`Modal-${idx}`}
-          className="carousel-item relative flex h-full w-full justify-center overflow-hidden bg-white/50"
+          className="carousel-item relative flex h-full w-full items-center justify-center place-self-center overflow-hidden bg-white/50"
           key={idx}
         >
-          <div className="m-4 flex w-[60%] flex-col rounded-xl border border-black bg-white object-scale-down p-4">
+          <div className="m-4 flex w-[80%] flex-col rounded-xl border border-black bg-white p-4 max-sm:w-[70%] max-[500px]:w-[60%] max-[440px]:w-[50%] max-[370px]:w-[45%]">
             <Image
               src={`https:${item.fields.web.fields.file.url}`}
               alt=""
               width={4800}
               height={7400}
-              className="h-[500px] w-full place-self-center rounded-xl border object-contain"
+              className="w-full place-self-center rounded-xl border object-contain"
             />
             <div className="mt-4 h-fit w-full place-self-center">
-              <h3 className="font-fraunces text-xl font-bold">
+              <h3 className="font-fraunces font-bold max-sm:text-base sm:text-lg md:text-xl">
                 Title: {item.fields.title}
               </h3>
-              <span className="font-barlow text-lg font-semibold">
+              <span className="font-barlow font-semibold max-sm:text-sm sm:text-base md:text-lg">
                 Client: {item.fields.client}
               </span>
             </div>
           </div>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute top-1/2 flex -translate-y-1/2 transform justify-between max-[500px]:left-8 max-[500px]:right-8 max-[440px]:left-16 max-[440px]:right-16 max-[370px]:left-24 max-[370px]:right-24 min-[500px]:left-2 min-[500px]:right-2 md:left-5 md:right-5">
             <a
               href={`#Modal-${idx - 1 < 0 ? mapCollection.length - 1 : idx - 1}`}
-              className="btn btn-circle"
+              className="btn btn-circle max-md:btn-sm"
             >
               ❮
             </a>
             <a
               href={`#Modal-${idx + 1 > mapCollection.length - 1 ? 0 : idx + 1}`}
-              className="btn btn-circle"
+              className="btn btn-circle max-md:btn-sm"
             >
               ❯
             </a>

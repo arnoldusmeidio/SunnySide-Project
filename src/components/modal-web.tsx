@@ -20,7 +20,7 @@ export default function ModalWeb({
       id="wrapper"
       onClick={handleClose}
     >
-      <div className="flex h-[80vh] w-[800px] flex-col object-contain">
+      <div className="flex w-[80vw] flex-col items-center justify-center object-contain sm:w-[90vw] lg:w-[70vw]">
         <CarouselWeb />
       </div>
     </button>

@@ -20,7 +20,7 @@ export default function ModalLogo({
       id="wrapper"
       onClick={handleClose}
     >
-      <div className="flex w-[800px] flex-col">
+      <div className="flex w-[80vw] flex-col items-center justify-center max-md:w-[90vw] max-sm:w-[100vw]">
         <CarouselLogo />
       </div>
     </button>
