@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "types:contentful": "cf-content-types-generator --spaceId wsv2x9h8k9wd --token CFPAT-4zLWQ9XavRDAWqOGs0OVWa5LJGcdFDR7cq6Qdmo4AVA -o src/contentful/types -X && prettier --write src/contentful/types"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
@@ -21,6 +22,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cf-content-types-generator": "^2.15.3",
     "daisyui": "^4.12.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",

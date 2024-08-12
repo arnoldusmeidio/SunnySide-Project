@@ -36,7 +36,7 @@ export default function NavBar() {
     <header>
       {navBar !== undefined ? (
         <nav
-          className={`${navBar || showNavBar ? "bg-indigo-400 transition-colors duration-75" : "bg-transparent"} fixed top-0 z-10 grid h-fit w-screen grid-cols-2 items-center justify-between px-6 py-8 sm:px-8 md:px-10 xl:px-20`}
+          className={`${navBar || showNavBar ? "bg-indigo-400 transition-colors duration-75" : "bg-transparent"} fixed top-0 z-10 grid h-fit w-screen min-w-[290px] grid-cols-2 items-center justify-between px-6 py-8 sm:px-8 md:px-10 xl:px-20`}
         >
           <Link
             href={"/"}

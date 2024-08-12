@@ -2,6 +2,7 @@
 
 import { createClient } from "contentful";
 import { useEffect, useState } from "react";
+import { TypeWebDesignSkeleton } from "@/contentful/types/TypeWebDesign";
 
 import Image from "next/image";
 
@@ -16,8 +17,9 @@ export default function CarouselWeb() {
 
           accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
         });
-        const response = await client.getEntries({
-          content_type: process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_WEB!,
+        const response = await client.getEntries<TypeWebDesignSkeleton>({
+          content_type:
+            process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_WEB || "",
         });
         setCollection(response);
       } catch (error) {
@@ -30,7 +32,7 @@ export default function CarouselWeb() {
 
   return (
     <div className="carousel">
-      {mapCollection?.map((item, idx) => (
+      {mapCollection?.map((item, idx: number) => (
         <div
           id={`Modal-${idx}`}
           className="carousel-item relative flex h-full w-full items-center justify-center place-self-center overflow-hidden bg-white/50"
