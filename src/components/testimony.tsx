@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Testimony() {
   const testimony = [
     {
-      profilePicture: "/image-emily.jpg",
-      name: "Emily R.",
+      profilePicture: "/image-diego.jpg",
+      name: "Diego R.",
       position: "Marketing Director",
       text: "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
     },
@@ -15,7 +15,7 @@ export default function Testimony() {
       text: "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
     },
     {
-      profilePicture: "/image-jennie.jpg",
+      profilePicture: "/image-jennie.png",
       name: "Jennie F.",
       position: "Business Owner",
       text: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",

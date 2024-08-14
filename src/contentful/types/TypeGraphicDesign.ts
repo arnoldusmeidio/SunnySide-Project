@@ -15,7 +15,7 @@ export interface TypeGraphicDesignFields {
 
 export type TypeGraphicDesignSkeleton = EntrySkeletonType<
   TypeGraphicDesignFields,
-  "graphicDesign"
+  "graphicDesign" | string
 >;
 export type TypeGraphicDesign<
   Modifiers extends ChainModifiers,

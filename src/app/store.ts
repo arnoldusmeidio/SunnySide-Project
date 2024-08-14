@@ -6,3 +6,16 @@ export const store = configureStore({
     user: userReducer,
   },
 });
+
+export interface User {
+  user: {
+    users: {
+      name: {
+        last: string;
+      };
+      picture: {
+        large: string;
+      };
+    }[];
+  };
+}

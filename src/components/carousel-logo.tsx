@@ -2,11 +2,12 @@
 
 import { createClient } from "contentful";
 import { useEffect, useState } from "react";
+import { TypeLogoSkeleton } from "@/contentful/types";
 
 import Image from "next/image";
 
 export default function CarouselLogo() {
-  const [collection, setCollection] = useState([]);
+  const [collection, setCollection] = useState([]) as any;
 
   useEffect(() => {
     async function getData() {
@@ -16,8 +17,9 @@ export default function CarouselLogo() {
 
           accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
         });
-        const response = await client.getEntries({
-          content_type: process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_LOGO!,
+        const response: any = await client.getEntries<TypeLogoSkeleton>({
+          content_type:
+            process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_LOGO || "",
         });
         setCollection(response);
       } catch (error) {
@@ -30,7 +32,7 @@ export default function CarouselLogo() {
 
   return (
     <div className="carousel">
-      {mapCollection?.map((item, idx) => (
+      {mapCollection?.map((item: any, idx: number) => (
         <div
           id={`Modal-${idx}`}
           className="carousel-item relative flex h-full w-full justify-center overflow-hidden bg-white/50"

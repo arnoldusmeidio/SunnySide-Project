@@ -1,9 +1,4 @@
 export type {
-  TypeGallery,
-  TypeGalleryFields,
-  TypeGallerySkeleton,
-} from "./TypeGallery";
-export type {
   TypeGraphicDesign,
   TypeGraphicDesignFields,
   TypeGraphicDesignSkeleton,

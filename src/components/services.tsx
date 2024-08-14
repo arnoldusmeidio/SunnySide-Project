@@ -24,7 +24,7 @@ export default function Services() {
         />
       </div>
 
-      <div className="flex h-full flex-col items-center gap-8 pt-20">
+      <div className="flex h-full flex-col items-center gap-8 pt-24">
         <h2 className="font-fraunces text-[5rem] font-black tracking-[1rem] text-cyan-800 max-sm:text-[4rem] max-sm:tracking-[0.5rem] max-[550px]:text-[3rem] max-[400px]:text-[2.5rem] max-[350px]:tracking-[0.25rem]">
           SERVICES
         </h2>

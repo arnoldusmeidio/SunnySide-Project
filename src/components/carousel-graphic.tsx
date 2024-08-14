@@ -1,12 +1,13 @@
 "use client";
 
 import { createClient } from "contentful";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { TypeGraphicDesignSkeleton } from "@/contentful/types";
 
 import Image from "next/image";
 
 export default function CarouselGraphic() {
-  const [collection, setCollection] = useState([]);
+  const [collection, setCollection] = useState([]) as any;
 
   useEffect(() => {
     async function getData() {
@@ -16,10 +17,11 @@ export default function CarouselGraphic() {
 
           accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
         });
-        const response = await client.getEntries({
-          content_type:
-            process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_GRAPHIC!,
-        });
+        const response: any =
+          await client.getEntries<TypeGraphicDesignSkeleton>({
+            content_type:
+              process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_GRAPHIC || "",
+          });
         setCollection(response);
       } catch (error) {
         console.error(error);
@@ -31,7 +33,7 @@ export default function CarouselGraphic() {
 
   return (
     <div className="carousel">
-      {mapCollection?.map((item, idx) => (
+      {mapCollection?.map((item: any, idx: number) => (
         <div
           id={`Modal-${idx}`}
           className="carousel-item relative flex w-full items-center justify-center overflow-hidden bg-white/50 py-4"

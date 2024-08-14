@@ -3,11 +3,12 @@
 import { createClient } from "contentful";
 import { useEffect, useState } from "react";
 import { TypeWebDesignSkeleton } from "@/contentful/types/TypeWebDesign";
+import { Entry } from "contentful";
 
 import Image from "next/image";
 
 export default function CarouselWeb() {
-  const [collection, setCollection] = useState([]);
+  const [collection, setCollection] = useState([]) as any;
 
   useEffect(() => {
     async function getData() {
@@ -17,7 +18,7 @@ export default function CarouselWeb() {
 
           accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
         });
-        const response = await client.getEntries<TypeWebDesignSkeleton>({
+        const response: any = await client.getEntries<TypeWebDesignSkeleton>({
           content_type:
             process.env.NEXT_PUBLIC_CONTENTFUL_CONTENT_TYPE_WEB || "",
         });
@@ -32,7 +33,7 @@ export default function CarouselWeb() {
 
   return (
     <div className="carousel">
-      {mapCollection?.map((item, idx: number) => (
+      {mapCollection?.map((item: any, idx: number) => (
         <div
           id={`Modal-${idx}`}
           className="carousel-item relative flex h-full w-full items-center justify-center place-self-center overflow-hidden bg-white/50"

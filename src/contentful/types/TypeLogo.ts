@@ -13,7 +13,10 @@ export interface TypeLogoFields {
   logo: EntryFieldTypes.AssetLink;
 }
 
-export type TypeLogoSkeleton = EntrySkeletonType<TypeLogoFields, "logo">;
+export type TypeLogoSkeleton = EntrySkeletonType<
+  TypeLogoFields,
+  "logo" | string
+>;
 export type TypeLogo<
   Modifiers extends ChainModifiers,
   Locales extends LocaleCode = LocaleCode,

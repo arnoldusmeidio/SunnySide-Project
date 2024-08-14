@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchUsers = createAsyncThunk("user/fetchUser", async () => {
-  const response = await fetch("https://randomuser.me/api/?results=4&nat=us");
+  const response = await fetch("https://randomuser.me/api/?results=6&nat=us");
   const data = await response.json();
   return data;
 });

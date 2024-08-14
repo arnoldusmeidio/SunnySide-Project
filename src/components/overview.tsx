@@ -55,8 +55,8 @@ export default function Overview() {
         </h3>
         <p className="text-xl font-medium text-dark-grayish-blue">
           Using a collaborative formula of designers, researchers,
-          photographers, videographers, and copywriters, We'll build and extend
-          your brand in digital places.
+          photographers, videographers, and copywriters, We&apos;ll build and
+          extend your brand in digital places.
         </p>
         <Link
           href={"/services"}
@@ -86,7 +86,7 @@ export default function Overview() {
           </h4>
           <p className="text-center text-xl font-medium text-desaturated-cyan">
             Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients'
+            underscores your brand message and captures potential clients&apos;
             attention.
           </p>
         </div>
